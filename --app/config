@@ -1,0 +1,33 @@
+[settings]
+default-encoding=UTF-8
+enable-site-specific-quirks=true
+enable-java-applet=false
+last-window-width=1280
+last-window-height=768
+show-bookmarkbar=false
+show-panel=false
+text-editor=gvim -f %F
+location-entry-search=https://duckduckgo.com/?q=%s
+preferred-encoding=MIDORI_ENCODING_UNICODE
+always-show-tabbar=false
+open-tabs-in-the-background=true
+flash-window-on-new-bg-tabs=true
+enable-plugins=false
+enable-spell-checking=false
+enable-html5-database=false
+maximum-cookie-age=0
+maximum-history-age=0
+identify-as=MIDORI_IDENT_FIREFOX
+user-agent=Mozilla/5.0 (X11; Linux; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Midori/0.4
+clear-private-data=49
+clear-data=page-icons,formhistory,web-cookies,flash-cookies,html5-databases,web-cache,offline-appcache,
+strip-referer=true
+site-data-rules=-google.com,-google.ru,-gstatic.com,-facebook.com,-yandex.ru,-yandex.com,-yandex.net,-yandex.st,-yastatic.net
+
+[extensions]
+libadblock.so=true
+libstatusbar-features.so=true
+libaddons.so=false
+
+
+

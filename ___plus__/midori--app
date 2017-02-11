@@ -1,0 +1,4 @@
+#!/bin/bash
+notify-send "$1"
+midori --private --config="$HOME/.config/midori/--app/" --app="$1"
+

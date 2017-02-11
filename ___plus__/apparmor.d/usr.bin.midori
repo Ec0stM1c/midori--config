@@ -1,0 +1,77 @@
+# Last Modified: Mon Apr  4 01:36:33 2016
+#include <tunables/global>
+
+# /usr/bin/midori flags=(complain){
+# OFF
+
+/usr/bin/midori {
+  @{HOME}/Downloads/** rw,
+  deny @{HOME}/*/** rw,
+  @{HOME}/Downloads/** rw,
+  #include <abstractions/audio>
+  #include <abstractions/base>
+  #include <abstractions/dbus-session-strict>
+  #include <abstractions/evince>
+  #include <abstractions/nameservice>
+  #include <abstractions/ubuntu-browsers.d/java>
+  #include <abstractions/ubuntu-browsers.d/kde>
+  #include <abstractions/ubuntu-browsers.d/mailto>
+  #include <abstractions/ubuntu-browsers.d/multimedia>
+  #include <abstractions/ubuntu-browsers.d/productivity>
+  #include <abstractions/ubuntu-browsers.d/text-editors>
+  #include <abstractions/ubuntu-browsers.d/ubuntu-integration>
+  #include <abstractions/ubuntu-browsers.d/user-files>
+  #include <abstractions/user-tmp>
+  #include <abstractions/openssl>
+
+  network inet stream,
+  network inet6 stream,
+
+  deny /home/*/.mozilla/ r,
+  deny /home/*/.mozilla/** r,
+
+  /usr/bin/gvim rix,
+  /bin/bash rix,
+  /bin/dash rix,
+  /bin/grep rix,
+  /bin/ps r,
+  /bin/sed rix,
+  /etc/xdg/midori/search r,
+  /etc/xfce4/defaults.list r,
+  /home/*/.Xauthority r,
+  /home/*/.adobe/Flash_Player/AssetCache/ r,
+  /home/*/.cache/midori/ rw,
+  /home/*/.cache/midori/** rw,
+  /home/*/.cache/webkit/ rw,
+  /home/*/.cache/webkit/**db rw,
+  /home/*/.config/dconf/user r,
+  /home/*/.config/gtk-2.0/ rw,
+  /home/*/.config/gtk-2.0/** rw,
+  /home/*/.config/gtk-3.0/bookmarks rw,
+  /home/*/.config/midori/ rw,
+  /home/*/.config/midori/** rw,
+  /home/*/.config/pulse/cookie r,
+  /home/*/.config/user-dirs.dirs r,
+  /home/*/.gtkrc-2.0 r,
+  /home/*/.gtkrc-xfce r,
+  /home/*/.local/share/applications/ r,
+  /home/*/.local/share/applications/** r,
+  /home/*/.local/share/gvfs-metadata/ r,
+  /home/*/.local/share/gvfs-metadata/** r,
+  /home/*/.local/share/recently-used.xbel rw,
+  /home/*/.local/share/recently-used.xbel.* rw,
+  /home/*/.macromedia/Flash_Player/ rw,
+  /home/*/.macromedia/Flash_Player/** rw,
+  /proc/*/cmdline r,
+  /proc/*/fd/ r,
+  /run/user/*/dconf/user rw,
+  /run/user/1000/*/ a,
+  /run/user/1000/icedteaplugin-* a,
+  /tmp/** rwlk,
+  /usr/bin/m4 rix,
+  /usr/bin/midori mr,
+  /usr/lib/** mr,
+  /var/tmp/** rwlk,
+  /{run,dev}/shm/pulse-shm* rwk,
+
+}
